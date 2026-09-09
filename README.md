@@ -38,7 +38,7 @@ expressBookReviews/
 Clone the repository:
 
 ```bash
-git clone https://github.com/Atibayounus/expressBookReviews.git
+git clone https://github.com/Cabidoulin/expressBookReviews.git
 ```
 
 Navigate into the project:
@@ -89,11 +89,6 @@ Use **Postman** or another API client to test the available endpoints.
 * Testing APIs using Postman
 * Organizing a backend project
 
-## 👨‍💻 Author
-
-**Atiba Dar**
-
-Computer Science Student & Developer
 
 GitHub: [@Atibayounus](https://github.com/Atibayounus)
 
