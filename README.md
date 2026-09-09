@@ -89,9 +89,3 @@ Use **Postman** or another API client to test the available endpoints.
 * Testing APIs using Postman
 * Organizing a backend project
 
-
-GitHub: [@Atibayounus](https://github.com/Atibayounus)
-
----
-
-⭐ If you found this project useful, consider giving it a star!
