@@ -1,91 +1,31 @@
-# 📚 Express Book Reviews
+# Aplicacion de Resenas de Libros
 
-A backend REST API built with **Node.js** and **Express.js** for managing books and their reviews.
+Proyecto final en Node.js y Express con operaciones CRUD, sesiones y JWT.
 
-## 🚀 Features
-
-* 📖 Get a list of books
-* 🔍 Get book details
-* ⭐ Add and manage book reviews
-* 📝 Update reviews
-* 🗑️ Delete reviews
-* ⚡ RESTful API routes
-* 🧩 Express.js routing and middleware
-
-## 🛠️ Technologies Used
-
-* **Node.js**
-* **Express.js**
-* **JavaScript**
-* **REST API**
-
-## 📁 Project Structure
-
-```text
-expressBookReviews/
-│
-├── routes/
-│   └── ...
-│
-├── index.js
-├── package.json
-├── package-lock.json
-└── README.md
-```
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Cabidoulin/expressBookReviews.git
-```
-
-Navigate into the project:
-
-```bash
-cd expressBookReviews
-```
-
-Install dependencies:
+## Ejecutar
 
 ```bash
 npm install
+npm start
 ```
 
-## ▶️ Run the Server
+Servidor: `http://localhost:5000`
 
-Start the application with:
+## Pruebas rapidas
 
 ```bash
-node index.js
+curl http://localhost:5000/
+curl http://localhost:5000/isbn/1
+curl http://localhost:5000/author/Chinua%20Achebe
+curl http://localhost:5000/title/Things%20Fall%20Apart
+curl http://localhost:5000/review/1
+curl -X POST http://localhost:5000/register -H 'Content-Type: application/json' -d '{"username":"didier","password":"clave123"}'
+curl -c cookies.txt -X POST http://localhost:5000/customer/login -H 'Content-Type: application/json' -d '{"username":"didier","password":"clave123"}'
+curl -b cookies.txt -X PUT 'http://localhost:5000/customer/auth/review/1?review=Excelente'
+curl -b cookies.txt -X DELETE http://localhost:5000/customer/auth/review/1
 ```
 
-The API will be available at:
+Los endpoints `/async/books`, `/async/isbn/:isbn`, `/async/author/:author` y `/async/title/:title` implementan las tareas 10 a 13 con Async/Await y Axios.
 
-```text
-http://localhost:8000
-```
-
-## 📌 API
-
-The project provides Express routes for working with books and reviews.
-
-Example:
-
-```http
-GET /books
-```
-
-Use **Postman** or another API client to test the available endpoints.
-
-## 📚 What I Learned
-
-* Building REST APIs with Express.js
-* Creating Express routes
-* Handling HTTP requests and responses
-* Working with JSON data
-* CRUD operations
-* Testing APIs using Postman
-* Organizing a backend project
+> Nota: los usuarios, sesiones y reseñas se almacenan en memoria y se reinician cuando se detiene el servidor.
 
